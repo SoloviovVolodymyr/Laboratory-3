@@ -1,0 +1,270 @@
+:root {
+    --fuchsia: #FF00FF;
+    --brown: #A52A2A;
+    --ivory: #FFFFF0;
+    --oldLace: #FDF5E6;
+    --skyBlue: #87CEEB;
+}
+::selection {
+    color: var(--fuchsia);
+    background: Cyan;
+}
+
+/* font */
+html {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+article {
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    word-spacing: 5px;
+    text-indent: 15px;
+}
+
+/* navigation bar */
+nav {
+    display: flex;
+    background: var(--brown);
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.logo {
+    height: 5rem;
+    width: 5rem;
+    margin-left: 3rem;
+    transition: 0.5s;
+}
+nav li {
+    list-style: none;
+    display: inline-block;
+    margin-top: 0.5em;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-right: 3rem;
+}
+nav a {
+    text-decoration: none;
+    color: var(--ivory);
+    transition: 0.5s;
+}
+nav a:hover {
+    font-size: 15px;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background: var(--brown);
+    z-index:60;
+    padding: 10px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+    width: 170px;
+}
+
+
+/* photo */
+#fotoRadius{
+   border-radius: 5rem;
+   transition: 0.5s;  
+}
+img:hover {
+    transform: scale(1.05);
+    filter: brightness(110%);
+}
+.fotoCenter {
+    border-style: double;
+    border-width: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    transition: 0.7s;
+}
+
+
+/* body */
+.mainBody {
+    background-color: var(--oldLace);
+    margin: 0;
+    padding: 0;
+}
+.kyivBackground {
+    background-color: var(--skyBlue);
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.SantaBack {
+    background-color: var(--skyBlue);
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* footer */
+footer {
+    padding-bottom: 40px;
+    padding-top: 50px;
+}
+.pFooter {
+    font-size: 1.3rem;
+    font-family: 'Trebuchet MS';
+}
+
+/* index.html */
+.mainPage {
+    font-size: 2.2rem;
+}
+.mainPoint {
+    background-color: green;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    font-size: 50px;
+    transition: 0.5s;
+}
+.mainPoint:hover {
+    transform: translateY(-5px);
+    filter: brightness(110%);
+    
+}
+
+/* Cities.html */
+.cities a{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    transition: 0.5s;
+}
+.cities a:hover{
+    font-size: 40px;
+}
+
+/* Kyiv.html task number 3*/
+.maydanContainer {
+    position: relative;
+    text-align: center;
+    left: 30%;
+    width: 40em;
+    height: 30em;
+}
+.maydanContainer img {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;    
+    transition: opacity 5s ease;
+}
+.maydanContainer:hover img{
+    opacity: 1;
+}
+.maydanContainer:hover .centered{
+    opacity: 1;
+    font-size: 0;
+}
+.centered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+/* Forma.html */
+.formBody, .formHtml {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.bg-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../image/formFoto.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 100px);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+form h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+input[type=text], input[type=email] {
+    border-radius: 10px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus, input[type=email]:focus {
+    background-color: lightblue;
+    width: 100%;
+}
+select {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    margin: 8px 0;
+}
+input[type=submit], input[type=reset] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* back to top link*/
+.back-to-top-link {
+    position: sticky;
+    pointer-events: all;
+    top: calc(100vh - 5rem);
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #d6e3f0;
+}
+.back-to-top-wrapper {
+    position: absolute;
+    top: 250vh;
+    right: 0.25rem;
+    bottom: -5em;
+    width: 3em;
+    pointer-events: none;
+}
