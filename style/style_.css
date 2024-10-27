@@ -268,3 +268,19 @@ input[type=submit], input[type=reset] {
     width: 3em;
     pointer-events: none;
 }
+btn-arrow {
+    position: relative;
+    padding-right: 30px;
+}
+
+.btn-arrow::after {
+    content: '';
+    position: absolute;
+    left: 18.5px;
+    top: 45%;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: translateY(-50%) rotate(-135deg); /* Обертаємо для створення стрілки */
+}
