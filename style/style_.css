@@ -258,8 +258,8 @@ input[type=submit], input[type=reset] {
 }
 .back-to-top-wrapper {
     position: absolute;
-    top: 250vh;
-    right: 0.25rem;
+    top: 1vh;
+    
     bottom: -5em;
     width: 3em;
     pointer-events: none;
